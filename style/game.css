@@ -1,0 +1,92 @@
+
+#playground {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+#playground video {
+    width: 635px;
+    height: auto;
+    min-height: 480px;
+    object-fit: cover;
+}
+
+#players {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    background: #C4ED8D;
+}
+
+#players .player {
+    position: absolute;
+    z-index: 10;
+    top: 10px;
+    width: 50%;
+}
+
+#me.player {
+    left: 0;
+    text-align: center;
+}
+
+#opponent.player {
+    right: 0;
+    text-align: center;
+}
+
+.player > div {
+    margin: 10px;
+}
+
+.player-label {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.player-score {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#choices {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    flex: 1px;
+    background: #C4ED8D;
+}
+
+#choices .choice {
+    border-radius: 10px;
+    width: 180px;
+    height: 70px;
+    border: solid 2.5px #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    background: #C4ED8D;
+    transition: all 0.3s;
+}
+
+#choices .choice:hover {
+    background-color: #fff;
+}
+
+#choices .choice img {
+
+    object-fit: contain;
+    width: 100px;
+}
+
+#timer {
+    position: absolute;
+    font-size: 70px;
+    font-weight: bold;
+}

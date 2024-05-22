@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Test</h1>
+        <p>Test</p>
+    </div>
+    <div>
+        <img id="me" src="./image/me.png" alt="">
+        <img id="opponent" src="./image/opponent.png" alt="">
+    </div>
+    <div>
+        <button>Play</button>
+    </div>
+    <script>
+        const button = document.querySelector('button');
+        const imgMe = document.querySelector('#me');
+        const imgOp = document.querySelector('#opponent');
+
+        const imgsMe = [
+            './image/R.gif',
+            './image/P.gif',
+            './image/S.gif'
+        ]
+
+        const imgsOp = [
+            './image/R2.gif',
+            './image/P2.gif',
+            './image/S2.gif'
+        ]
+
+        button.addEventListener('click', () => {
+            const randomMe = Math.floor(Math.random() * 3);
+            const randomOp = Math.floor(Math.random() * 3);
+            imgMe.src = imgsMe[randomMe];
+            imgOp.src = imgsOp[randomOp];
+        });
+    </script>
+</body>
+</html>

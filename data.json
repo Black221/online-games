@@ -1,0 +1,37 @@
+{
+    "gameplay": {
+        
+    },
+    "image": {
+
+    },
+    "audio": {
+
+    },
+    "video": {
+        "scissors-rock": {
+            "video": "scissors-rock.mp4",
+            "audio": "scissors-rock.mp3"
+        },
+        "scissors-paper": {
+            "video": "scissors-paper.mp4",
+            "audio": "scissors-paper.mp3"
+        },
+        "rock-paper": {
+            "video": "rock-paper.mp4",
+            "audio": "rock-paper.mp3"
+        },
+        "rock-scissors": {
+            "video": "rock-scissors.mp4",
+            "audio": "rock-scissors.mp3"
+        },
+        "paper-scissors": {
+            "video": "paper-scissors.mp4",
+            "audio": "paper-scissors.mp3"
+        },
+        "paper-rock": {
+            "video": "paper-rock.mp4",
+            "audio": "paper-rock.mp3"
+        }
+    }
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/modal.css">
+    <link rel="stylesheet" href="style/game.css">
+    <link rel="stylesheet" href="style/chat.css">
+    <link rel="stylesheet" href="style/lobby.css">
+    <title>Rock paper scissors</title>
+</head>
+<body>
+    <main id="main">
+
+        <!-- To display login or register forms -->
+        <div id="modal"></div>
+
+        <!-- To display the game -->
+        <div id="head">
+            <div class="flex">
+                <div class="flex">
+                    <input type="text" id="server" placeholder="Rejoindre un serveur">
+                    <button>Rejoindre</button>
+                </div>
+                <div>
+                    Nombre de joueurs: <span id="players-count">0</span> <span id="players-max">/ 16</span>
+                </div>
+            </div>
+            <div class="flex">
+                <div id="user">
+                    <div id="username">Username</div>
+                    <div id="server-name">Server</div>
+                </div>
+                <button id="login">Se connecter</button>
+                <button id="register">S'inscrire</button>
+                <button id="logout">Se déconnecter</button>
+            </div>
+        </div>
+
+        <!-- Game container -->
+        <div id="container">
+            <div id="gameplay">
+                <!-- On partie start -->
+                <div id="playground">
+                    <div id="players">
+                        <div id="me" class="player">
+                            <div class="player-label">
+                                Moi
+                            </div>
+                            <div class="player-score">0</div>
+                        </div>
+                        <div id="opponent" class="player">
+                            <div class="player-label">
+                                Adversaire
+                            </div>
+                            <div class="player-score">0</div>
+                        </div>
+                        <video src="./image/animations/paper-rock.mp4">
+                        </video>
+                        <div id="timer">3</div>
+                    </div>
+                    <div id="choices">
+                        <div id="rock" class="choice">
+                            <img src="image/rock.png" alt="rock">
+                        </div>
+                        <div id="paper" class="choice">
+                            <img src="image/paper.png" alt="paper">
+                        </div>
+                        <div id="scissors" class="choice">
+                            <img src="image/scissors.png" alt="scissors">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- lobby -->
+                <!-- <div id="lobby">
+                    <div id="lobby-header">
+                        <h2>
+                            Nom du serveur
+                        </h2>
+                        <div id="lobby-timer">Temps restant: <span> 0 </span></div>
+                    </div>
+                    <div id="lobby-players">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="game-user">
+                                        <div class="user">Username</div>
+                                    </td>
+                                    <td class="game-vs">VS</td>
+                                    <td class="game-user">
+                                        <div class="user">Username</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="game-user">
+                                        <div class="user">Username</div>
+                                    </td>
+                                    <td class="game-vs">VS</td>
+                                    <td class="game-user">
+                                        <div class="user">Username</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="game-user">
+                                        <div class="user">Username</div>
+                                    </td>
+                                    <td class="game-vs">VS</td>
+                                    <td class="game-user">
+                                        <div class="user">Username</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="game-user">
+                                        <div class="user">Username</div>
+                                    </td>
+                                    <td class="game-vs">VS</td>
+                                    <td class="game-user">
+                                        <div class="user">Username</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="game-user">
+                                        <div class="user">Username</div>
+                                    </td>
+                                    <td class="game-vs">VS</td>
+                                    <td class="game-user">
+                                        <div class="user">Username</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="game-user">
+                                        <div class="user">Username</div>
+                                    </td>
+                                    <td class="game-vs">VS</td>
+                                    <td class="game-user">
+                                        <div class="user">Username</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="game-user">
+                                        <div class="user">Username</div>
+                                    </td>
+                                    <td class="game-vs">VS</td>
+                                    <td class="game-user">
+                                        <div class="user">Username</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="game-user">
+                                        <div class="user">Username</div>
+                                    </td>
+                                    <td class="game-vs">VS</td>
+                                    <td class="game-user">
+                                        <div class="user">Username</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="lobby-footer">
+                        <button id="ready">Prêt</button>
+                    </div>
+                </div> -->
+                <!-- <div id="game-home">
+                    <h1>
+                        Rock Paper Scissors
+                    </h1>
+                    <div class="flex" style="margin: 20px;">
+                        <img style="width: 180px;" src="./image/rps.png" alt="">
+                    </div>
+                    <div class="flex">
+                        <div>
+                            <div>
+                                <img style="width: 180px;" src="" alt="">
+                            </div>
+                            <button>Jouer contre l'ordinateur</button>
+                        </div>
+                        <div>
+                            <div>
+                                <img style="width: 180px;" src="" alt="">
+                            </div>
+                            <button>Jouer contre un joueur</button>
+                        </div>
+                    </div>
+                </div>-->
+            </div> 
+
+            <!-- To display the result of the game -->
+            <div id="scoreboard">
+                <div id="classment" class="box">
+                    <div class="box-label">Classement</div>
+                    <div class="box-data">0</div>
+                </div>
+                <div id="parties" class="box">
+                    <div class="box-label">Nombre de parties jouées</div>
+                    <div class="box-data">0</div>
+                </div>
+                <div id="wins" class="box">
+                    <div class="box-label">Nombre de parties  gagnées</div>
+                    <div class="box-data">0</div>
+                </div>
+            </div>
+
+            <div id="chat">
+                <div id="chat-header">
+                    <button class="chat-room" id="chat-general">
+                        Chat général
+                    </button> 
+                    <hr style="height: 100%;">           
+                    <button class="chat-room" id="chat-server">
+                        Chat du serveur
+                    </button>
+                </div>
+                <div id="chat-box">
+                    <div id="chat-messages"></div>
+                </div>
+                <div id="chat-input" class="flex">
+                    <input type="text" id="message" placeholder="Type your message"/>
+                    <button id="send">Send</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- To display the footer -->
+        <div id="foot"></div>
+    </main>
+    <script type="module" src="index.js"></script>
+</body>
+</html>

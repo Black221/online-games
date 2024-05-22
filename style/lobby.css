@@ -1,0 +1,86 @@
+
+
+#game-home, #lobby {
+    width: 635px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #C4ED8D;
+    padding: 20px;
+}
+
+#lobby-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #C4ED8D;
+}
+
+#lobby-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#lobby-timer span{
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    background: #C4ED8D;
+} 
+
+#lobby-timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lobby-players {
+    flex: 1;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+}
+
+
+table .game-vs {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    height: fit-content;
+}
+
+table .game-user {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    flex: 1;
+}
+
+table .user {
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    margin: 4px;
+}
+
+#lobby-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#ready {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 50px;
+    background: #fff;
+    cursor: pointer;
+}
+
+#ready:hover {
+    background: #1cbdba;
+    color: #fff;
+}
